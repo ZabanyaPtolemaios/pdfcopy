@@ -137,12 +137,19 @@
         function execCh(str) {
             str = dbc2sbc(str);
             str = str.replace(regexWhiteSpace, '');
+            str = str.replace(/,/g, "，");
+            str = str.replace(/./g, "。");
+            str = str.replace(/;/g, "；");
+            str = str.replace(/"/g, "“");
+            str = str.replace(/"/g, "”");
             return str;
         }
 
         function execEn(str) {
             str = dbc2sbc(str);
             str = str.replace(regexMultiSpace, ' ');
+            str = str.replace(/，/g, ",");
+            str = str.replace(/。/g, ".");
             return str;
         }
 
