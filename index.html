@@ -169,6 +169,14 @@
         str = str.replace(/\:/g, "：");
         str = str.replace(/;/g, "；");
         str = str.replace(/"/g, "“");
+        str = str.replace(/(\d+)。(\d+)/g, "$1.$2"); // 恢复小数的.
+        str = str.replace(/(\d+)。(\d+)/g, "$1.$2"); // 恢复小数的.
+        str = str.replace(/'|"/g, function(match) {
+          return match === "'" ? "‘" : "“";
+        }).replace(/'|"/g, function(match) {
+          return match === "'" ? "’" : "”";
+        });
+        return str;
         return str;
       }
 
